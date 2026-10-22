@@ -1,13 +1,15 @@
 package Entity;
 
+import java.util.List;
+
 public class Booking {
     private int booking_id;
     private int user_id;
     private int show_id;
-    private boolean seats_booked;
+    private List<String> seats_booked;
     private double total_price;
 
-    public Booking(int booking_id, int user_id, int show_id, boolean seats_booked, double total_price) {
+    public Booking(int booking_id, int user_id, int show_id, List<String> seats_booked, double total_price) {
         this.booking_id = booking_id;
         this.user_id = user_id;
         this.show_id = show_id;
@@ -39,11 +41,11 @@ public class Booking {
         this.show_id = show_id;
     }
 
-    public boolean isSeats_booked() {
+    public List<String> getSeats_booked() {
         return seats_booked;
     }
 
-    public void setSeats_booked(boolean seats_booked) {
+    public void setSeats_booked(List<String> seats_booked) {
         this.seats_booked = seats_booked;
     }
 
